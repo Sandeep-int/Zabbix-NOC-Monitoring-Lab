@@ -89,7 +89,7 @@ Performance and network visibility using monitoring tools
 ##  Screenshots
 
 ### System Deployment
-![Zabbix System Deployment](screenshots/01-system-deployment.png)
+![Zabbix System Deployment](screenshots01-system-deployment.png)
 
 ### Service Failure Detection
 ![Agent Down Alert](screenshots/02-service-failure-detection.png)
