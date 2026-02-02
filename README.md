@@ -1,36 +1,147 @@
-## Homelab : Enterprise NOC Monitoring & Incident Response
+Zabbix NOC Monitoring & Incident Detection Lab
 
-## Tools Used
-Monitoring: Zabbix 7.0.22
-OS/Env: Ubuntu Linux 22.04 (WSL2)
-Web Stack: Nginx, PHP 8.3, MariaDB
-Testing: Linux stress utility
+This project is a hands-on Network Operations Center (NOC) monitoring lab built using Zabbix.
+It simulates real-world infrastructure monitoring scenarios such as service failures, alert generation, performance degradation, and incident validation.
 
-## Objective
-To architect a professional Network Operations Center (NOC) environment capable of real-time health monitoring, high-sensitivity performance alerting, and proactive incident visualization.
+The goal of this lab is to understand how enterprise monitoring systems work in practice — not just how to install them, but how they detect issues, raise alerts, and help operators analyze problems.
 
-## Lab Components
-Zabbix Server: Centralized monitoring engine collecting 3.10+ values per second.
-Zabbix Agent: Deployed on the target host to monitor 166 internal items and 76 triggers.
-NOC Map: A functional "Digital Twin" of the infrastructure for visual triage.
+🎯 Objective
 
-## Configuration Performed
-Full-Stack Deployment: Managed service dependencies and verified "active (running)" status of the monitoring daemon.
-Logic Tuning: Re-engineered standard CPU triggers from 5-minute averages to instant 1-second thresholds (>20% utilization) to detect stealth spikes.
-Visual Mapping: Configured the "SANDEEP-NOC-CORE" map with live-linked host elements for immediate visual status updates.
+To gain practical, job-ready experience in:
 
-## Issues Simulated
-Service Blackout: Manually terminated the agent to test the availability detection loop.
-Resource Exhaustion: Generated a synthetic CPU load that peaked at 38.48% utilization to validate custom trigger sensitivity.
+Infrastructure and host monitoring
 
-## Troubleshooting & Resolution
-Triage: Performed Root Cause Analysis (RCA) via terminal, identifying the service as "inactive (dead)".
-Recovery: Executed systemctl start to restore monitoring services.
-Verification: Observed the "Global View" dashboard return to a healthy "1 Available" state.
+Agent-based data collection
 
-## NOC & Security Relevance
-Incident Lifecycle: Mastered the end-to-end process of Detection, Acknowledgment, and Resolution.
-Performance Engineering: Applied precision monitoring techniques to reduce "Alert Fatigue" and catch anomalies instantly.
-Capacity Planning: Analyzed eth0 network traffic patterns (968 bps peak) to monitor for potential data exfiltration or DDoS signatures.
+Alerting and trigger configuration
 
-## Evidence
+Incident detection and validation
+
+System performance and network monitoring
+
+NOC-style dashboards and visual maps
+
+🧱 Lab Architecture
+Components
+
+Zabbix Server running on Linux
+
+Zabbix Agent installed on the monitored host
+
+Zabbix Web Frontend for monitoring and visualization
+
+systemd-managed services
+
+Monitoring Flow
+
+Zabbix Agent → Zabbix Server → Triggers → Alerts → Dashboards
+
+🛠 Tools & Technologies
+
+Zabbix Server & Zabbix Agent
+
+Linux (Ubuntu)
+
+systemd
+
+SSH
+
+Virtual Machine (Local / AWS)
+
+Basic networking concepts (IP, ports, services)
+
+⚙️ Setup Summary
+
+Installed and configured Zabbix Server on Linux
+
+Installed Zabbix Agent on the monitored host
+
+Verified agent–server communication
+
+Applied default OS and performance templates
+
+Enabled monitoring for CPU, memory, disk, and network interfaces
+
+Configured custom triggers and alert logic
+
+🚨 Service Failure Detection (Incident Simulation)
+
+To simulate a real NOC incident:
+
+The Zabbix Agent service was manually stopped using systemctl
+
+The Zabbix Server detected the agent as unavailable
+
+An alert was triggered: “Linux: Zabbix agent is not available”
+
+The incident appeared in the Problems dashboard
+
+This demonstrates real-time availability monitoring and alert generation, similar to real production environments.
+
+🔍 Root Cause Analysis
+
+The monitoring system correctly distinguished between:
+
+Zabbix Agent service failure
+
+Zabbix Server restart (uptime less than 10 minutes)
+
+This confirms proper cause vs symptom identification, which is a core skill for NOC and SOC analysts.
+
+📊 Performance Monitoring & Triggers
+
+CPU utilization triggers were configured using expressions
+
+Severity levels such as Warning and Average were applied
+
+Trigger dependencies were used to reduce alert noise
+
+Real CPU stress was generated to validate trigger behavior
+
+All alerts were verified against actual system load, not assumptions.
+
+📈 Stress Testing & Validation
+
+CPU load was intentionally increased
+
+Real-time graphs showed clear usage spikes
+
+Trigger states changed correctly during high utilization
+
+System recovery was observed after load reduction
+
+This confirmed that the alerts were accurate, reliable, and meaningful.
+
+🌐 Network Flow Monitoring
+
+Monitored the primary network interface (eth0)
+
+Tracked inbound and outbound traffic
+
+Observed packet statistics and traffic trends
+
+This is useful for identifying abnormal network behavior or congestion.
+
+🖥 Visual Command Center
+
+Global dashboard for quick infrastructure overview
+
+Panels showing host availability and problem severity
+
+Network maps for visual monitoring
+
+The setup is designed to resemble enterprise NOC wallboards used by operations teams.
+
+🧠 Key Learnings
+
+How NOC teams monitor infrastructure health in real environments
+
+The importance of proactive alerting
+
+Differences between agent-level and service-level failures
+
+Trigger logic and alert lifecycle management
+
+Linux service troubleshooting
+
+Performance and network visibility using monitoring tools
