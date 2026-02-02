@@ -92,7 +92,7 @@ Performance and network visibility using monitoring tools
 ![Zabbix System Deployment](screenshots/01-system-deployment.png)
 
 ### Service Failure Detection
-![Agent Down Alert](screenshots/02-service-failure-detection.png)
+![Agent Down Alert](screenshots/02-agent-down-alert.png)
 
 ### Root Cause Analysis
 ![Root Cause Analysis](screenshots/03-root-cause-analysis.png)
@@ -101,10 +101,11 @@ Performance and network visibility using monitoring tools
 ![CPU Trigger](screenshots/04-cpu-trigger.png)
 
 ### Stress Testing & Performance Graph
-![CPU Stress Test](screenshots/05-stress-test-graph.png)
+![CPU Stress Test](screenshots/05-cpu-stress-test.png)
 
 ### Network Flow Monitoring
 ![Network Traffic](screenshots/06-network-traffic.png)
 
 ### NOC Dashboard View
 ![NOC Dashboard](screenshots/07-noc-dashboard.png)
+
