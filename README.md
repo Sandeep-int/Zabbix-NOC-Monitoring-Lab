@@ -88,16 +88,57 @@ Performance and network visibility using monitoring tools
 
 ##  Screenshots
 
-![Zabbix System Deployment](screenshots/1.%20System%20Deployment.png)
+### System Deployment
+![Zabbix System Deployment](screenshots/01-system-deployment.png)
 
-![Service Failure Detection](screenshots/2.%20Service%20Failure%20Detection.png)
+**Description:**  
+Zabbix Server running successfully with system information panel showing server status, version, active hosts, items, and triggers.
 
-![Root Cause Analysis](screenshots/3.%20Root%20Cause%20Analysis.png)
+---
 
-![Custom Performance Logic](screenshots/4.%20Custom%20Performance%20Logic.png)
+### Service Failure Detection
+![Agent Down Alert](screenshots/02-agent-down-alert.png)
 
-![Stress Testing](screenshots/5.%20Stress%20Testing.jpg)
+**Description:**  
+Zabbix detects Zabbix Agent unavailability after the agent service is manually stopped, triggering a real-time alert.
 
-![Visual Command Center](screenshots/6.%20Visual%20Command%20Center.png)
+---
 
-![Network Flow Analysis](screenshots/7.%20Network%20Flow%20Analysis.png)
+### Root Cause Analysis
+![Root Cause Analysis](screenshots/03-root-cause-analysis.png)
+
+**Description:**  
+Clear differentiation between agent failure and server restart events, enabling accurate root cause identification.
+
+---
+
+### CPU Trigger Configuration
+![CPU Trigger](screenshots/04-cpu-trigger.png)
+
+**Description:**  
+Custom CPU utilization trigger configured with thresholds and severity levels to control alert noise.
+
+---
+
+### Stress Testing & Performance Graph
+![CPU Stress Test](screenshots/05-cpu-stress-test.jpg)
+
+**Description:**  
+CPU stress test performed to validate monitoring accuracy and trigger behavior under load.
+
+---
+
+### NOC Dashboard View
+![NOC Dashboard](screenshots/06-noc-dashboard.png)
+
+**Description:**  
+Centralized NOC-style dashboard providing a real-time overview of infrastructure health.
+
+---
+
+### Network Flow Monitoring
+![Network Traffic](screenshots/07-network-traffic.png)
+
+**Description:**  
+Network interface monitoring showing inbound and outbound traffic trends.
+
