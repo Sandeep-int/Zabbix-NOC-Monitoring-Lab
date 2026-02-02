@@ -1,43 +1,28 @@
-Zabbix NOC Monitoring & Incident Detection Lab
-
+## Zabbix NOC Monitoring & Incident Detection Lab
 This project is a hands-on Network Operations Center (NOC) monitoring lab built using Zabbix.
 It simulates real-world infrastructure monitoring scenarios such as service failures, alert generation, performance degradation, and incident validation.
-
 The goal of this lab is to understand how enterprise monitoring systems work in practice — not just how to install them, but how they detect issues, raise alerts, and help operators analyze problems.
 
-🎯 Objective
-
+## Objective
 To gain practical, job-ready experience in:
-
-Infrastructure and host monitoring
-
-Agent-based data collection
-
+Infrastructure and host monitorin
+Agent-based data collectio
 Alerting and trigger configuration
-
 Incident detection and validation
-
 System performance and network monitoring
-
 NOC-style dashboards and visual maps
 
-🧱 Lab Architecture
+## Lab Architecture
 Components
-
 Zabbix Server running on Linux
-
 Zabbix Agent installed on the monitored host
-
 Zabbix Web Frontend for monitoring and visualization
-
 systemd-managed services
 
-Monitoring Flow
-
+## Monitoring Flow
 Zabbix Agent → Zabbix Server → Triggers → Alerts → Dashboards
 
-🛠 Tools & Technologies
-
+## Tools & Technologies
 Zabbix Server & Zabbix Agent
 
 Linux (Ubuntu)
