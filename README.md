@@ -24,7 +24,7 @@ Zabbix Agent → Zabbix Server → Triggers → Alerts → Dashboards
 
 ## Tools & Technologies
 Zabbix Server & Zabbix Agent
-Linux (Ubuntu)
+Linux
 systemd
 SSH
 Virtual Machine (Local / AWS)
